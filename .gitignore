@@ -1,0 +1,11 @@
+# Files
+.DS_Store
+yarn.lock
+package-lock.json
+
+# Folders
+node_modules
+dist
+static
+.sass-cache
+storage
