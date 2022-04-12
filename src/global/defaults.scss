@@ -1,0 +1,22 @@
+*, body {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  font-family: $font-primary;
+  background-color: $ui-1;
+  color: $ui-text;
+
+  h1, h2, h3, h4, h5, h6 {
+    color: $ui-title;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    background-color: $ui-dark-1;
+    color: $ui-dark-text;
+
+    h1, h2, h3, h4, h5, h6 {
+      color: $ui-dark-title;
+    }
+  }
+}

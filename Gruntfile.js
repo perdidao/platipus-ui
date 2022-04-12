@@ -3,8 +3,8 @@ module.exports = function (grunt) {
     pkg: grunt.file.readJSON('package.json'),
     watch: {
       styles: {
-        files: ['src/scss/**/*.scss'],
-        tasks: ['sass:dev', 'postcss:dev'],
+        files: ['src/**/*.scss'],
+        tasks: ['sass:dev', 'autoprefixer:dev', 'cssmin:dev'],
         options: { livereload: true },
       },
       static: {
@@ -15,21 +15,21 @@ module.exports = function (grunt) {
     sass: {
       dev: {
         files: {
-          'static/css/platipus-ui.min.css': 'src/main.scss',
+          'static/css/platypus-ui.min.css': 'src/main.scss',
         },
       },
       dist: {
         files: {
-          'dist/platipus-ui.min.css': 'src/main.scss',
+          'dist/platypus-ui.min.css': 'src/main.scss',
         },
       },
     },
     autoprefixer: {
       dev: {
-        src: 'static/css/platipus-ui.min.css',
+        src: 'static/css/platypus-ui.min.css',
       },
       dist: {
-        src: 'dist/platipus-ui.min.css',
+        src: 'dist/platypus-ui.min.css',
       },
     },
     cssmin: {
@@ -39,12 +39,12 @@ module.exports = function (grunt) {
       },
       dev: {
         files: {
-          'static/css/platipus-ui.min.css': 'static/css/platipus-ui.min.css'
+          'static/css/platypus-ui.min.css': 'static/css/platypus-ui.min.css'
         }
       },
       dist: {
         files: {
-          'dist/platipus-ui.min.css': 'static/css/platipus-ui.min.css'
+          'dist/platypus-ui.min.css': 'static/css/platypus-ui.min.css'
         }
       }
     },
