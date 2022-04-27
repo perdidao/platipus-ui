@@ -1,47 +1,55 @@
-/* =========
-  LIGHT UI
-*/
-$ui-dark-1: #0c0c0e;
-$ui-dark-2: #201f25;
-$ui-dark-3: #212028;
-$ui-dark-4: #2d313d;
-$ui-dark-text: #7d7d7f;
-$ui-dark-title: #c4c4c2;
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap');
 
 /* =========
-  DARK UI
+  UI
 */
-$ui-1: #f3f3f1;
-$ui-2: #dfe0da;
-$ui-3: #dedfd7;
-$ui-4: #d2cec2;
-$ui-text: #3b3b3d;
-$ui-title: #828280;
+$ui-1: #0f0e11;
+$ui-2: #1a191f;
+$ui-3: #232833;
+$ui-4: #878a91;
+$ui-text: #727273;
+$ui-title: #bdbcba;
+
+$ascent-0: rgba(255,255,255,.06);
+$ascent-1: rgba(255,255,255,.12);
+$ascent-2: rgba(255,255,255,.24);
+$ascent-3: rgba(255,255,255,.36);
+$ascent-4: rgba(255,255,255,.54);
+$ascent-5: rgba(255,255,255,.72);
+$ascent-6: rgba(255,255,255,.86);
+
+$default-transition: 200ms cubic-bezier(0, 0, 0.20, 1) 50ms;
 
 /* =========
   THEME COLORS
 */
-$ui-primary: #feb95a;
-$ui-secondary: #21c0aa;
+$ui-primary: #ffb058;
+$ui-secondary: #00b7a0;
 
 $ui-success: #21c0aa;
 $ui-warning: #feb95a;
-$ui-error: #c05f56;
+$ui-error: #bf1313;
+
+$ui-white: #fafafa;
+$ui-black: #1a1b1f;
 
 /* =========
   FONT RELATED
 */
-$font-primary: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-primary: 'Atkinson Hyperlegible', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
-$size-xxxs: 0.4rem;
-$size-xxs: 0.5rem;
-$size-xs: 0.6rem;
-$size-sm: 0.8rem;
-$size-md: 1rem;
-$size-lg: 1.2rem;
-$size-xl: 1.5rem;
-$size-xxl: 2rem;
-$size-xxxl: 3rem;
+$size-xxxs: vw(12);
+$size-xxs: vw(14);
+$size-xs: vw(16);
+$size-sm: vw(18);
+$size-md: vw(22);
+$size-lg: vw(26);
+$size-xl: vw(32);
+$size-xxl: vw(36);
+$size-xxxl: vw(42);
+
+$weight-regular: 400;
+$weight-bold: 600;
 
 /* =========
   SPACING

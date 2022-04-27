@@ -1,0 +1,122 @@
+.ptps-button {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: vw(40);
+  padding: 0 vw(20);
+  background-color: $ui-primary;
+  color: $ui-white;
+  border: 1px solid $ascent-2;
+  border-radius: vw(20);
+  
+  font-size: $size-xxs;
+  font-weight: $weight-bold;
+  text-transform: capitalize;
+  text-decoration: none;
+
+  transition: border-color, background-color $default-transition;
+
+  cursor: pointer;
+
+  &:hover {
+    border-color: $ascent-3;
+  }
+  
+  &:focus {
+    outline: none;
+    border-color: $ascent-3;
+    box-shadow: 0 0 0 vw(3) rgba($ui-primary, .3);
+  }
+
+  &:disabled {
+    background-color: $ascent-0;
+    border-color: $ascent-3;
+    color: $ui-4;
+    pointer-events: none;
+    cursor: default;
+  }
+
+  &--loading {
+    overflow: hidden;
+    text-indent: -99999em;
+    pointer-events: none;
+    cursor: default;
+
+    &::after {
+      content: ' ';
+      
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: rotate(0deg);
+      margin: vw(-10) 0 0 vw(-7);
+
+      display: block;
+      width: vw(14);
+      height: vw(14);
+      background-color: transparent;
+      border: 3px solid $ascent-5;
+      border-left-color: transparent;
+      border-top-color: transparent;
+      border-radius: 50%;
+
+      animation: rotate 400ms linear infinite;
+    }
+  }
+
+  &--secondary {
+    background: $ui-secondary;
+
+    &:focus {
+      box-shadow: 0 0 0 vw(3) rgba($ui-secondary, .3);
+    }
+  }
+
+  &--tertiary {
+    background: transparent;
+    border: 2px solid $ui-primary;
+    color: $ui-primary;
+    
+    &:hover {
+      background-color: $ascent-0;
+      border-color: $ui-primary;
+    }
+    
+    &:focus {
+      border: 2px solid $ui-primary;
+      box-shadow: 0 0 0 vw(3) rgba($ui-primary, .3);
+    }
+
+    &::after {
+      border-right-color: $ui-primary;
+      border-bottom-color: $ui-primary;
+    }
+  }
+
+  &--ghost {
+    background: transparent;
+    border-color: transparent;
+    color: $ui-primary;
+
+    &:hover {
+      border-color: transparent;
+      background-color: $ascent-0;
+    }
+
+    &:focus {
+      box-shadow: none;
+      background-color: $ascent-0;
+      border-color: transparent;
+    }
+
+    &::after {
+      border-right-color: $ui-primary;
+      border-bottom-color: $ui-primary;
+    }
+  }
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
